@@ -1,7 +1,9 @@
-import { Link } from 'react-router';
+'use client';
+
+import Link from 'next/link';
 import { Heart, Eye, ShoppingBag } from 'lucide-react';
-import { Product } from '../data/products';
-import { useShop } from '../context/ShopContext';
+import { Product } from '@/lib/data/products';
+import { useShop } from '@/context/ShopContext';
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import QuickViewModal from './QuickViewModal';
@@ -29,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <Link to={`/product/${product.id}`} className="block">
+        <Link href={`/product/${product.id}`} className="block">
           {/* Image Container */}
           <div className="relative aspect-[3/4] overflow-hidden bg-secondary">
             <img
@@ -68,11 +70,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                   e.preventDefault();
                   toggleWishlist(product);
                 }}
-                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                  isInWishlist(product.id)
-                    ? 'bg-primary text-black'
-                    : 'bg-white/90 text-black hover:bg-primary'
-                }`}
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isInWishlist(product.id)
+                  ? 'bg-primary text-black'
+                  : 'bg-white/90 text-black hover:bg-primary'
+                  }`}
               >
                 <Heart className={`w-5 h-5 ${isInWishlist(product.id) ? 'fill-current' : ''}`} />
               </button>
