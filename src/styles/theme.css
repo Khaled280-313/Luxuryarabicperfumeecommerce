@@ -1,0 +1,206 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Luxury Perfume Brand Colors */
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --card: #141414;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1a1a;
+  --popover-foreground: #f5f5f5;
+  --primary: #d4af37; /* Luxury Gold */
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #2a2a2a;
+  --muted-foreground: #a0a0a0;
+  --accent: #d4af37;
+  --accent-foreground: #0a0a0a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(212, 175, 55, 0.1);
+  --input: rgba(212, 175, 55, 0.2);
+  --input-background: #1a1a1a;
+  --switch-background: #2a2a2a;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #d4af37;
+  --chart-1: #d4af37;
+  --chart-2: #b8941f;
+  --chart-3: #9c7a0f;
+  --chart-4: #806107;
+  --chart-5: #644700;
+  --radius: 0.25rem;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(212, 175, 55, 0.1);
+  --sidebar-ring: #d4af37;
+  
+  /* Luxury Perfume specific tokens */
+  --gold: #d4af37;
+  --gold-light: #e5c158;
+  --gold-dark: #b8941f;
+  --charcoal: #1a1a1a;
+  --black: #0a0a0a;
+  --white: #f5f5f5;
+  --gray: #a0a0a0;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --card: #141414;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1a1a;
+  --popover-foreground: #f5f5f5;
+  --primary: #d4af37;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #2a2a2a;
+  --muted-foreground: #a0a0a0;
+  --accent: #d4af37;
+  --accent-foreground: #0a0a0a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(212, 175, 55, 0.1);
+  --input: rgba(212, 175, 55, 0.2);
+  --ring: #d4af37;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #d4af37;
+  --chart-2: #b8941f;
+  --chart-3: #9c7a0f;
+  --chart-4: #806107;
+  --chart-5: #644700;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f5f5f5;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #f5f5f5;
+  --sidebar-border: rgba(212, 175, 55, 0.1);
+  --sidebar-ring: #d4af37;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-charcoal: var(--charcoal);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-gray: var(--gray);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+    direction: rtl;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  label {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
